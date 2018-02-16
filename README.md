@@ -22,20 +22,20 @@ namespace My.App.Utils.Test.Target1
             => new Result {
                 r = Calculadora.Somar(input.n1, input.n2) })
         .Then("O resultado obtido é @r", (expected, result)
-            => Assert.Equal(expected.r, result.r));
+            => Assert.Equal(expected.r, result.r))
 
-    Expectancy()
-        .In(new Input {
-            n1 = 999,
-            n2 = 1 })
-        .Out(new Output{
-            r = 1000 })
+        .Expectancy()
+            .In(new Input {
+                n1 = 999,
+                n2 = 1 })
+            .Out(new Output{
+                r = 1000 })
 
-        .In(new Input {
-            n1 = 47,
-            n2 = 53 })
-        .Out(new Output{
-            r = 100 });
+            .In(new Input {
+                n1 = 47,
+                n2 = 53 })
+            .Out(new Output{
+                r = 100 });
             
     // [FOOTER]
 }
