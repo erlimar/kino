@@ -70,7 +70,7 @@ o foco é direcionado a descrição do cenário de teste.
 
 ```csharp
 #region HEADER
-    public class Target1Tests : Kino<Input, Output, Resul> {
+    public class Target1Tests : Kino<Input, Output, Result> {
     public Target1Tests() => {
 #endregion
 
