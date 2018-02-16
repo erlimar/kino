@@ -47,20 +47,20 @@ Você teria uma assinatura de entradas, saídas e expectativas:
 ```csharp
 namespace My.App.Utils.Test.Target1
 {
-    public class Input
+    public struct Input
     {
-        public int n1 { get; set; }
-        public int n2 { get; set; }
+        public int n1;
+        public int n2;
     }
 
-    public class Output
+    public struct Output
     {
-        public int r { get; set; }
+        public int r;
     }
 
-    public class Result
+    public struct Result
     {
-        public int r { get; set; }
+        public int r;
     }
 }
 ```
