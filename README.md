@@ -1,7 +1,6 @@
-Kino
-====
+![](kino-logo.png)
 
-Um dialeto de [Cucumber Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) para .NET/CShap.
+__Kino__ é um dialeto de [Cucumber Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) para .NET/CShap.
 
 A ideia é produzir testes unitários utilizando um jargão [BusinessReadableDSL](https://martinfowler.com/bliki/BusinessReadableDSL.html), meio que parecido com isso:
 
