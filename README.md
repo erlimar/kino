@@ -1,12 +1,12 @@
-Pepino
-======
+Kino
+====
 
 Um dialeto de [Cucumber Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) para .NET/CShap.
 
 A ideia é produzir testes unitários utilizando um jargão [BusinessReadableDSL](https://martinfowler.com/bliki/BusinessReadableDSL.html), meio que parecido com isso:
 
 ```csharp
-using E5R.Test.Pepino;
+using E5R.Kino;
 
 namespace My.App.Utils.Test.Target1
 {
@@ -71,7 +71,7 @@ o foco é direcionado a descrição do cenário de teste.
 
 ```csharp
 #region HEADER
-    public class Target1Tests : Pepino<Input, Output, Resul> {
+    public class Target1Tests : Kino<Input, Output, Resul> {
     public Target1Tests() => {
 #endregion
 
