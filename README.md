@@ -66,7 +66,7 @@ namespace My.App.Utils.Test.Target1
 ```
 
 Para facilitar a leitura, no código inicial fizemos um _folding_ da parte declarativa
-da classe. Em uma IDE como o [Visual Studio](https://visualstudio.com) ou [Visual Studio Code] (https://code.visualstudio.com/docs/editor/codebasics#_folding) fica bem legal a visualização e
+da classe. Em uma IDE como o [Visual Studio](https://visualstudio.com) ou [Visual Studio Code](https://code.visualstudio.com/docs/editor/codebasics#_folding) fica bem legal a visualização e
 o foco é direcionado a descrição do cenário de teste.
 
 ```csharp
