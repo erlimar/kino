@@ -1,4 +1,4 @@
-![](kino-logo.png)
+![](kino-banner.png)
 
 __Kino__ é um dialeto de [Cucumber Gherkin](https://github.com/cucumber/cucumber/wiki/Gherkin) para .NET/CShap.
 
