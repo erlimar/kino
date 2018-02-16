@@ -10,34 +10,35 @@ using E5R.Test.Pepino;
 
 namespace My.App.Utils.Test.Target1
 {
-    public class Target1Tests : Pepino<Input, Output, Resul> {
-    public Target1Tests() => {
-        Feature("Somar")
-               ("Calcula a soma entre números inteiros,")
-               ("produzindo resultados matematicamente coerentes.");
-        
-        Scenario("Números positivos devem ser somados")
-            .Given("Número 1 como @n1")
-            .And("Número 2 como @n2")
-            .When("Eu acionar somar!", (input)
-                => new Result {
-                    r = Calculadora.Somar(input.n1, input.n2) })
-            .Then("O resultado obtido é @r", (expected, result)
-                => Assert.Equal(expected.r, result.r));
-        
-        Expectancy()
-            .In(new Input {
-                n1 = 999,
-                n2 = 1 })
-            .Out(new Output{
-                r = 1000 })
+    // [HEADER]
+    
+    Feature("Somar")
+           ("Calcula a soma entre números inteiros,")
+           ("produzindo resultados matematicamente coerentes.");
+
+    Scenario("Números positivos devem ser somados")
+        .Given("Número 1 como @n1")
+        .And("Número 2 como @n2")
+        .When("Eu acionar somar!", (input)
+            => new Result {
+                r = Calculadora.Somar(input.n1, input.n2) })
+        .Then("O resultado obtido é @r", (expected, result)
+            => Assert.Equal(expected.r, result.r));
+
+    Expectancy()
+        .In(new Input {
+            n1 = 999,
+            n2 = 1 })
+        .Out(new Output{
+            r = 1000 })
+
+        .In(new Input {
+            n1 = 47,
+            n2 = 53 })
+        .Out(new Output{
+            r = 100 });
             
-            .In(new Input {
-                n1 = 47,
-                n2 = 53 })
-            .Out(new Output{
-                r = 100 });
-    }}
+    // [FOOTER]
 }
 ```
 
@@ -63,3 +64,21 @@ namespace My.App.Utils.Test.Target1
     }
 }
 ```
+
+Para facilitar a leitura, no código inicial fizemos um _folding_ da parte declarativa
+da classe. Em uma IDE como o [Visual Studio](https://visualstudio.com) ou [Visual Studio Code] (https://code.visualstudio.com/docs/editor/codebasics#_folding) fica bem legal a visualização e
+o foco é direcionado a descrição do cenário de teste.
+
+```csharp
+#region HEADER
+    public class Target1Tests : Pepino<Input, Output, Resul> {
+    public Target1Tests() => {
+#endregion
+
+    // Seu código de especificação do teste está aqui!
+
+#region FOOTER
+    }}
+#endregion
+```
+
