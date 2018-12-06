@@ -81,3 +81,28 @@ o foco é direcionado a descrição do cenário de teste.
 #endregion
 ```
 
+A execução dos testes produziria uma saída parecida com essa:
+
+```console
+$ kino MyCompany.MyLib.dll
+Starting test execution, please wait...
+
+[MyCompany.Target1Tests]...................................[FAIL]
+  > Feature: Somar                                         [fail]
+  # Scenario 1: Números positivos devem ser somados        [fail]
+  ---------------------------------------------------------------
+  Given  Número 1 como 999
+    And  Número 2 como 1
+   When  Eu acionar somar!
+   Then  O resultado obtido é 1000                           [ok]
+  
+  Given  Número 1 como 47
+    And  Número 2 como 53
+   When  Eu acionar somar!
+   Then  O resultado obtido é 100                          [fail]
+  .....  Error Message: Assert.Equal() Failure
+  .....  Expected: 100
+  .....  Actual:   98
+  ---------------------------------------------------------------
+```
+
